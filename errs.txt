@@ -1,0 +1,879 @@
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/nokogiri-1.6.3.1/lib/nokogiri/nokogiri.bundle: [BUG] Segmentation fault at 0x00000000000438
+ruby 2.1.3p242 (2014-09-19 revision 47630) [x86_64-darwin13.0]
+
+-- Crash Report log information --------------------------------------------
+   See Crash Report log file under the one of following:
+     * ~/Library/Logs/CrashReporter
+     * /Library/Logs/CrashReporter
+     * ~/Library/Logs/DiagnosticReports
+     * /Library/Logs/DiagnosticReports
+   for more details.
+
+-- Control frame information -----------------------------------------------
+c:0037 p:-17527083946916 s:0135 e:000134 TOP    [FINISH]
+c:0036 p:---- s:0133 e:000132 CFUNC  :require
+c:0035 p:0020 s:0129 e:000128 RESCUE /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/nokogiri-1.6.3.1/lib/nokogiri.rb:29
+c:0034 p:0125 s:0126 e:000125 TOP    /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/nokogiri-1.6.3.1/lib/nokogiri.rb:25 [FINISH]
+c:0033 p:---- s:0124 e:000123 CFUNC  :require
+c:0032 p:0060 s:0120 e:000119 TOP    /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/loofah-2.0.1/lib/loofah.rb:3 [FINISH]
+c:0031 p:---- s:0118 e:000117 CFUNC  :require
+c:0030 p:0015 s:0114 e:000113 TOP    /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rails-html-sanitizer-1.0.1/lib/rails-html-sanitizer.rb:2 [FINISH]
+c:0029 p:---- s:0112 e:000111 CFUNC  :require
+c:0028 p:0037 s:0108 e:000107 BLOCK  /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/runtime.rb:76 [FINISH]
+c:0027 p:---- s:0105 e:000104 CFUNC  :each
+c:0026 p:0055 s:0102 e:000101 BLOCK  /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/runtime.rb:72 [FINISH]
+c:0025 p:---- s:0095 e:000094 CFUNC  :each
+c:0024 p:0030 s:0092 e:000091 METHOD /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/runtime.rb:61
+c:0023 p:0013 s:0088 e:000087 METHOD /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler.rb:133
+c:0022 p:0047 s:0084 e:000083 TOP    /Users/joberbeck/webdev/sample_app/config/application.rb:7 [FINISH]
+c:0021 p:---- s:0082 e:000081 CFUNC  :require
+c:0020 p:0014 s:0078 e:000077 BLOCK  /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/commands/commands_tasks.rb:79 [FINISH]
+c:0019 p:---- s:0075 e:000074 CFUNC  :tap
+c:0018 p:0031 s:0072 e:000071 METHOD /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/commands/commands_tasks.rb:76
+c:0017 p:0033 s:0069 e:000068 METHOD /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/commands/commands_tasks.rb:40
+c:0016 p:0116 s:0065 e:000064 TOP    /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/commands.rb:17 [FINISH]
+c:0015 p:---- s:0061 e:000060 CFUNC  :require
+c:0014 p:0056 s:0057 e:000056 TOP    /Users/joberbeck/webdev/sample_app/bin/rails:8 [FINISH]
+c:0013 p:---- s:0055 e:000054 CFUNC  :load
+c:0012 p:0127 s:0051 e:000050 METHOD /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client/rails.rb:27
+c:0011 p:0011 s:0047 e:000046 METHOD /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client/command.rb:7
+c:0010 p:0015 s:0043 e:000042 METHOD /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client.rb:26
+c:0009 p:0292 s:0038 e:000037 TOP    /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/bin/spring:48 [FINISH]
+c:0008 p:---- s:0034 e:000033 CFUNC  :load
+c:0007 p:0122 s:0030 e:000029 TOP    /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/binstub.rb:11 [FINISH]
+c:0006 p:---- s:0025 e:000024 CFUNC  :require
+c:0005 p:0115 s:0021 e:000020 METHOD /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55
+c:0004 p:0159 s:0011 e:000010 TOP    /Users/joberbeck/webdev/sample_app/bin/spring:16 [FINISH]
+c:0003 p:---- s:0008 e:000007 CFUNC  :load
+c:0002 p:0020 s:0004 E:0018a8 EVAL   bin/rails:3 [FINISH]
+c:0001 p:0000 s:0002 E:000db8 TOP    [FINISH]
+
+bin/rails:3:in `<main>'
+bin/rails:3:in `load'
+/Users/joberbeck/webdev/sample_app/bin/spring:16:in `<top (required)>'
+/Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+/Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/binstub.rb:11:in `<top (required)>'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/binstub.rb:11:in `load'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/bin/spring:48:in `<top (required)>'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client.rb:26:in `run'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client/command.rb:7:in `call'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client/rails.rb:27:in `call'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client/rails.rb:27:in `load'
+/Users/joberbeck/webdev/sample_app/bin/rails:8:in `<top (required)>'
+/Users/joberbeck/webdev/sample_app/bin/rails:8:in `require'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/commands.rb:17:in `<top (required)>'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/commands/commands_tasks.rb:76:in `server'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/commands/commands_tasks.rb:76:in `tap'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/commands/commands_tasks.rb:79:in `block in server'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/commands/commands_tasks.rb:79:in `require'
+/Users/joberbeck/webdev/sample_app/config/application.rb:7:in `<top (required)>'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler.rb:133:in `require'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/runtime.rb:61:in `require'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/runtime.rb:61:in `each'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/runtime.rb:72:in `block in require'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/runtime.rb:72:in `each'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/runtime.rb:76:in `block (2 levels) in require'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/runtime.rb:76:in `require'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rails-html-sanitizer-1.0.1/lib/rails-html-sanitizer.rb:2:in `<top (required)>'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rails-html-sanitizer-1.0.1/lib/rails-html-sanitizer.rb:2:in `require'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/loofah-2.0.1/lib/loofah.rb:3:in `<top (required)>'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/loofah-2.0.1/lib/loofah.rb:3:in `require'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/nokogiri-1.6.3.1/lib/nokogiri.rb:25:in `<top (required)>'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/nokogiri-1.6.3.1/lib/nokogiri.rb:29:in `rescue in <top (required)>'
+/Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/nokogiri-1.6.3.1/lib/nokogiri.rb:29:in `require'
+
+-- C level backtrace information -------------------------------------------
+0   ruby                                0x0000000109b80556 rb_vm_bugreport + 134
+1   ruby                                0x0000000109a35713 report_bug + 307
+2   ruby                                0x0000000109a355d4 rb_bug + 180
+3   ruby                                0x0000000109b03119 sigsegv + 153
+4   libsystem_platform.dylib            0x00007fff8a7105aa _sigtramp + 26
+5   libruby.2.1.0.dylib                 0x000000010a3b0d21 ruby_xmalloc + 17
+6   ???                                 0x00007fff56202290 0x0 + 140734638334608
+
+-- Other runtime information -----------------------------------------------
+
+* Loaded script: bin/rails
+
+* Loaded features:
+
+    0 enumerator.so
+    1 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/enc/encdb.bundle
+    2 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/enc/trans/transdb.bundle
+    3 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/rbconfig.rb
+    4 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/compatibility.rb
+    5 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/defaults.rb
+    6 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/deprecate.rb
+    7 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/errors.rb
+    8 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/version.rb
+    9 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/requirement.rb
+   10 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/platform.rb
+   11 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/basic_specification.rb
+   12 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/stub_specification.rb
+   13 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/util/stringio.rb
+   14 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/specification.rb
+   15 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/exceptions.rb
+   16 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/core_ext/kernel_gem.rb
+   17 thread.rb
+   18 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/thread.bundle
+   19 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/monitor.rb
+   20 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb
+   21 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems.rb
+   22 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/path_support.rb
+   23 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/dependency.rb
+   24 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/etc.bundle
+   25 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/fileutils.rb
+   26 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/pathname.bundle
+   27 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/pathname.rb
+   28 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/gem_path_manipulation.rb
+   29 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/gem_helpers.rb
+   30 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/match_platform.rb
+   31 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/rubygems_ext.rb
+   32 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/io/console.bundle
+   33 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/user_interaction.rb
+   34 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/config_file.rb
+   35 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/rubygems_integration.rb
+   36 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/version.rb
+   37 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/constants.rb
+   38 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/current_ruby.rb
+   39 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler.rb
+   40 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/shared_helpers.rb
+   41 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/settings.rb
+   42 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/errors.rb
+   43 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/stringio.bundle
+   44 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/json.rb
+   45 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/digest.bundle
+   46 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/digest.rb
+   47 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/digest/md5.bundle
+   48 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/tmpdir.rb
+   49 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/version.rb
+   50 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/fiddle.bundle
+   51 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/fiddle/function.rb
+   52 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/fiddle/closure.rb
+   53 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/fiddle.rb
+   54 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/sid.rb
+   55 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/configuration.rb
+   56 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/env.rb
+   57 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client/command.rb
+   58 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/socket.bundle
+   59 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/socket.rb
+   60 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client/run.rb
+   61 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client/help.rb
+   62 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/set.rb
+   63 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client/binstub.rb
+   64 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client/stop.rb
+   65 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client/status.rb
+   66 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client/rails.rb
+   67 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client/version.rb
+   68 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/spring-1.1.3/lib/spring/client.rb
+   69 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/digest/sha1.bundle
+   70 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/definition.rb
+   71 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/dependency.rb
+   72 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/ruby_dsl.rb
+   73 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/dsl.rb
+   74 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/source_list.rb
+   75 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/source.rb
+   76 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/uri/common.rb
+   77 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/uri/generic.rb
+   78 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/uri/ftp.rb
+   79 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/uri/http.rb
+   80 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/uri/https.rb
+   81 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/uri/ldap.rb
+   82 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/uri/ldaps.rb
+   83 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/uri/mailto.rb
+   84 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/uri.rb
+   85 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/timeout.rb
+   86 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/net/protocol.rb
+   87 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/zlib.bundle
+   88 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/net/http/exceptions.rb
+   89 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/net/http/header.rb
+   90 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/net/http/generic_request.rb
+   91 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/net/http/request.rb
+   92 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/net/http/requests.rb
+   93 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/net/http/response.rb
+   94 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/net/http/responses.rb
+   95 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/net/http/proxy_delta.rb
+   96 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/net/http/backward.rb
+   97 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/net/http.rb
+   98 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/date_core.bundle
+   99 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/date/format.rb
+  100 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/date.rb
+  101 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/time.rb
+  102 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/request.rb
+  103 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/cgi/core.rb
+  104 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/cgi/util.rb
+  105 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/cgi/cookie.rb
+  106 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/cgi.rb
+  107 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/uri_formatter.rb
+  108 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/fcntl.bundle
+  109 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/openssl.bundle
+  110 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/openssl/bn.rb
+  111 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/openssl/cipher.rb
+  112 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/openssl/config.rb
+  113 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/openssl/digest.rb
+  114 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/openssl/x509.rb
+  115 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/openssl/buffering.rb
+  116 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/openssl/ssl.rb
+  117 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/openssl.rb
+  118 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/securerandom.rb
+  119 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/resolv.rb
+  120 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/remote_fetcher.rb
+  121 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/text.rb
+  122 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/name_tuple.rb
+  123 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/rubygems/spec_fetcher.rb
+  124 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/source/rubygems.rb
+  125 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/strscan.bundle
+  126 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/source/path.rb
+  127 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/source/git.rb
+  128 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/lockfile_parser.rb
+  129 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/lazy_specification.rb
+  130 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/tsort.rb
+  131 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/forwardable.rb
+  132 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/spec_set.rb
+  133 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/environment.rb
+  134 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/runtime.rb
+  135 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/index.rb
+  136 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/remote_specification.rb
+  137 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/endpoint_specification.rb
+  138 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/dep_proxy.rb
+  139 /Users/joberbeck/.rvm/gems/ruby-2.1.3@global/gems/bundler-1.7.3/lib/bundler/setup.rb
+  140 /Users/joberbeck/webdev/sample_app/config/boot.rb
+  141 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/commands/commands_tasks.rb
+  142 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/optparse.rb
+  143 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/thread_safe-0.3.4/lib/thread_safe/version.rb
+  144 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/delegate.rb
+  145 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/thread_safe-0.3.4/lib/thread_safe/synchronized_delegator.rb
+  146 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/thread_safe-0.3.4/lib/thread_safe.rb
+  147 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/array/prepend_and_append.rb
+  148 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/hash/deep_merge.rb
+  149 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/hash/except.rb
+  150 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/hash/slice.rb
+  151 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/i18n-0.6.11/lib/i18n/version.rb
+  152 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/i18n-0.6.11/lib/i18n/exceptions.rb
+  153 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/i18n-0.6.11/lib/i18n/interpolate/ruby.rb
+  154 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/i18n-0.6.11/lib/i18n.rb
+  155 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/lazy_load_hooks.rb
+  156 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/i18n-0.6.11/lib/i18n/config.rb
+  157 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/i18n.rb
+  158 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/thread_safe-0.3.4/lib/thread_safe/non_concurrent_cache_backend.rb
+  159 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/thread_safe-0.3.4/lib/thread_safe/mri_cache_backend.rb
+  160 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/thread_safe-0.3.4/lib/thread_safe/cache.rb
+  161 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/inflector/inflections.rb
+  162 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/inflections.rb
+  163 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/inflector/methods.rb
+  164 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/dependencies/autoload.rb
+  165 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/gem_version.rb
+  166 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/version.rb
+  167 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/array/extract_options.rb
+  168 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/module/attribute_accessors.rb
+  169 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/concern.rb
+  170 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/logger_silence.rb
+  171 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/logger.rb
+  172 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/logger.rb
+  173 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support.rb
+  174 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/object/blank.rb
+  175 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/kernel/singleton_class.rb
+  176 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/module/remove_method.rb
+  177 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/class/attribute.rb
+  178 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/module/delegation.rb
+  179 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/singleton.rb
+  180 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/deprecation/instance_delegator.rb
+  181 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb
+  182 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/mutex_m.rb
+  183 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/notifications/fanout.rb
+  184 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/per_thread_registry.rb
+  185 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/notifications.rb
+  186 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/deprecation/behaviors.rb
+  187 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/deprecation/reporting.rb
+  188 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/module/aliasing.rb
+  189 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/deprecation/method_wrappers.rb
+  190 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/deprecation/proxy_wrappers.rb
+  191 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/module/deprecation.rb
+  192 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/deprecation.rb
+  193 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/rails.rb
+  194 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_pack/gem_version.rb
+  195 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_pack/version.rb
+  196 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_pack.rb
+  197 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/tempfile.rb
+  198 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-1.5.2/lib/rack/multipart.rb
+  199 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-1.5.2/lib/rack/utils.rb
+  200 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-1.5.2/lib/rack.rb
+  201 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch.rb
+  202 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/ruby_version_check.rb
+  203 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/kernel/reporting.rb
+  204 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/hash/keys.rb
+  205 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/key_generator.rb
+  206 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/base64.rb
+  207 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/message_verifier.rb
+  208 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/initializable.rb
+  209 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/ordered_options.rb
+  210 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/object/acts_like.rb
+  211 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/bigdecimal.bundle
+  212 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/object/duplicable.rb
+  213 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/object/deep_dup.rb
+  214 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/object/try.rb
+  215 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/object/inclusion.rb
+  216 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/object/to_query.rb
+  217 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/object/to_param.rb
+  218 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/multibyte.rb
+  219 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/string/multibyte.rb
+  220 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/inflector/transliterate.rb
+  221 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/string/inflections.rb
+  222 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/date_time/calculations.rb
+  223 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/xml_mini/rexml.rb
+  224 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/xml_mini.rb
+  225 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/array/conversions.rb
+  226 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/time/acts_like.rb
+  227 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/proxy_object.rb
+  228 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/duration.rb
+  229 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/ruby_core_support.rb
+  230 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/offset_rationals.rb
+  231 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/time_or_datetime.rb
+  232 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/timezone_definition.rb
+  233 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/timezone_offset.rb
+  234 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/timezone_transition.rb
+  235 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/timezone_transition_definition.rb
+  236 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/timezone_index_definition.rb
+  237 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/timezone_info.rb
+  238 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/data_timezone_info.rb
+  239 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/linked_timezone_info.rb
+  240 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/transition_data_timezone_info.rb
+  241 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/zoneinfo_timezone_info.rb
+  242 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/data_source.rb
+  243 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/ruby_data_source.rb
+  244 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/zoneinfo_data_source.rb
+  245 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/timezone_period.rb
+  246 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/timezone.rb
+  247 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/info_timezone.rb
+  248 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/data_timezone.rb
+  249 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/linked_timezone.rb
+  250 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/timezone_proxy.rb
+  251 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/country_index_definition.rb
+  252 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/country_info.rb
+  253 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/ruby_country_info.rb
+  254 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/zoneinfo_country_info.rb
+  255 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/country.rb
+  256 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo/country_timezone.rb
+  257 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tzinfo-1.2.2/lib/tzinfo.rb
+  258 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/values/time_zone.rb
+  259 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/time/conversions.rb
+  260 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/time_with_zone.rb
+  261 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/date_and_time/zones.rb
+  262 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/time/zones.rb
+  263 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/date_and_time/calculations.rb
+  264 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/time/calculations.rb
+  265 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/time/marshal.rb
+  266 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/time.rb
+  267 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/date/acts_like.rb
+  268 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/date/zones.rb
+  269 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/date/calculations.rb
+  270 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/date/conversions.rb
+  271 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/date.rb
+  272 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/date_time/acts_like.rb
+  273 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/date_time/conversions.rb
+  274 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/date_time/zones.rb
+  275 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/date_time.rb
+  276 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/numeric/time.rb
+  277 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/integer/time.rb
+  278 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/string/conversions.rb
+  279 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/string/zones.rb
+  280 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/time.rb
+  281 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/array/wrap.rb
+  282 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/hash/reverse_merge.rb
+  283 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/hash/conversions.rb
+  284 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/object/conversions.rb
+  285 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/object/instance_variables.rb
+  286 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/json/version.rb
+  287 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/ostruct.rb
+  288 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/json/generic_object.rb
+  289 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/json/common.rb
+  290 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/enc/utf_16be.bundle
+  291 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/enc/utf_16le.bundle
+  292 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/enc/utf_32be.bundle
+  293 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/enc/utf_32le.bundle
+  294 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/json/ext/parser.bundle
+  295 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/json/ext/generator.bundle
+  296 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/json/ext.rb
+  297 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/json.rb
+  298 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/bigdecimal/util.rb
+  299 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/big_decimal/conversions.rb
+  300 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/object/json.rb
+  301 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/option_merger.rb
+  302 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/object/with_options.rb
+  303 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/object.rb
+  304 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/paths.rb
+  305 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/rack.rb
+  306 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/configuration.rb
+  307 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/inflector.rb
+  308 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/module/introspection.rb
+  309 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/railtie.rb
+  310 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/engine/railties.rb
+  311 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/engine.rb
+  312 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/application.rb
+  313 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/gem_version.rb
+  314 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/version.rb
+  315 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/file_update_checker.rb
+  316 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/railtie/configuration.rb
+  317 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/i18n_railtie.rb
+  318 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/railtie.rb
+  319 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/railtie.rb
+  320 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails.rb
+  321 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-1.5.2/lib/rack/server.rb
+  322 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/commands/server.rb
+  323 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/string_inquirer.rb
+  324 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activemodel-4.1.6/lib/active_model/gem_version.rb
+  325 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activemodel-4.1.6/lib/active_model/version.rb
+  326 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activemodel-4.1.6/lib/active_model.rb
+  327 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/crud.rb
+  328 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/factory_methods.rb
+  329 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/expressions.rb
+  330 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/predications.rb
+  331 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/window_predications.rb
+  332 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/math.rb
+  333 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/alias_predication.rb
+  334 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/order_predications.rb
+  335 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/table.rb
+  336 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/attributes/attribute.rb
+  337 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/attributes.rb
+  338 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/compatibility/wheres.rb
+  339 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/expression.rb
+  340 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/visitor.rb
+  341 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/depth_first.rb
+  342 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/to_sql.rb
+  343 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/sqlite.rb
+  344 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/postgresql.rb
+  345 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/mysql.rb
+  346 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/mssql.rb
+  347 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/oracle.rb
+  348 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/join_sql.rb
+  349 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/where_sql.rb
+  350 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/order_clauses.rb
+  351 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/dot.rb
+  352 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/ibm_db.rb
+  353 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors/informix.rb
+  354 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/visitors.rb
+  355 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/tree_manager.rb
+  356 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/insert_manager.rb
+  357 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/select_manager.rb
+  358 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/update_manager.rb
+  359 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/delete_manager.rb
+  360 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/node.rb
+  361 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/select_statement.rb
+  362 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/select_core.rb
+  363 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/insert_statement.rb
+  364 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/update_statement.rb
+  365 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/terminal.rb
+  366 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/true.rb
+  367 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/false.rb
+  368 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/unary.rb
+  369 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/grouping.rb
+  370 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/ascending.rb
+  371 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/descending.rb
+  372 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/unqualified_column.rb
+  373 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/with.rb
+  374 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/binary.rb
+  375 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/equality.rb
+  376 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/in.rb
+  377 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/join_source.rb
+  378 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/delete_statement.rb
+  379 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/table_alias.rb
+  380 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/infix_operation.rb
+  381 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/over.rb
+  382 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/and.rb
+  383 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/function.rb
+  384 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/count.rb
+  385 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/extract.rb
+  386 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/values.rb
+  387 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/named_function.rb
+  388 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/window.rb
+  389 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/inner_join.rb
+  390 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/outer_join.rb
+  391 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/string_join.rb
+  392 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes/sql_literal.rb
+  393 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/nodes.rb
+  394 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/deprecated.rb
+  395 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/sql/engine.rb
+  396 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel/sql_literal.rb
+  397 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/arel-5.0.1.20140414130214/lib/arel.rb
+  398 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/gem_version.rb
+  399 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/version.rb
+  400 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/enumerable.rb
+  401 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activemodel-4.1.6/lib/active_model/attribute_methods.rb
+  402 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/attribute_methods.rb
+  403 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/benchmark.rb
+  404 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/benchmark.rb
+  405 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/connection_adapters/schema_cache.rb
+  406 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/ipaddr.rb
+  407 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/connection_adapters/abstract/schema_dumper.rb
+  408 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/connection_adapters/abstract/schema_creation.rb
+  409 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/connection_adapters/abstract/quoting.rb
+  410 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/connection_adapters/abstract/database_statements.rb
+  411 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/errors.rb
+  412 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/migration.rb
+  413 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/migration/join_table.rb
+  414 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/connection_adapters/abstract/schema_statements.rb
+  415 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/connection_adapters/abstract/database_limits.rb
+  416 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/connection_adapters/abstract/query_cache.rb
+  417 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/descendants_tracker.rb
+  418 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/callbacks.rb
+  419 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/connection_adapters/abstract_adapter.rb
+  420 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/scoping.rb
+  421 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record.rb
+  422 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activemodel-4.1.6/lib/active_model/railtie.rb
+  423 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/module/attr_internal.rb
+  424 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/module/anonymous.rb
+  425 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/abstract_controller.rb
+  426 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/http/filter_redirect.rb
+  427 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-1.5.2/lib/rack/request.rb
+  428 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-1.5.2/lib/rack/response.rb
+  429 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/http/cache.rb
+  430 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/http/response.rb
+  431 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/json/decoding.rb
+  432 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/json/encoding.rb
+  433 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/json.rb
+  434 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_controller/metal/live.rb
+  435 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/hash_with_indifferent_access.rb
+  436 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/hash/indifferent_access.rb
+  437 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/rescuable.rb
+  438 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/http/upload.rb
+  439 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-test-0.6.2/lib/rack/mock_session.rb
+  440 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-test-0.6.2/lib/rack/test/cookie_jar.rb
+  441 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-test-0.6.2/lib/rack/test/mock_digest_request.rb
+  442 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-test-0.6.2/lib/rack/test/utils.rb
+  443 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-test-0.6.2/lib/rack/test/methods.rb
+  444 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-test-0.6.2/lib/rack/test/uploaded_file.rb
+  445 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-test-0.6.2/lib/rack/test.rb
+  446 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_controller/metal/strong_parameters.rb
+  447 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/load_error.rb
+  448 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/name_error.rb
+  449 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/uri.rb
+  450 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_controller.rb
+  451 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/abstract_controller/railties/routes_helpers.rb
+  452 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_controller/railties/helpers.rb
+  453 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/gem_version.rb
+  454 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/version.rb
+  455 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/erb.rb
+  456 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/string/output_safety.rb
+  457 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view.rb
+  458 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/railtie.rb
+  459 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_controller/railtie.rb
+  460 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activerecord-4.1.6/lib/active_record/railtie.rb
+  461 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionmailer-4.1.6/lib/action_mailer/gem_version.rb
+  462 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionmailer-4.1.6/lib/action_mailer/version.rb
+  463 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/class/delegating_attributes.rb
+  464 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/module/reachable.rb
+  465 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/class/subclasses.rb
+  466 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/class.rb
+  467 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionmailer-4.1.6/lib/action_mailer.rb
+  468 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionmailer-4.1.6/lib/action_mailer/railtie.rb
+  469 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/test_unit/railtie.rb
+  470 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/version.rb
+  471 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/hike-1.2.3/lib/hike.rb
+  472 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/template.rb
+  473 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/string.rb
+  474 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/erb.rb
+  475 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/etanni.rb
+  476 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/haml.rb
+  477 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/css.rb
+  478 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/csv.rb
+  479 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/coffee.rb
+  480 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/nokogiri.rb
+  481 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/builder.rb
+  482 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/markaby.rb
+  483 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/liquid.rb
+  484 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/radius.rb
+  485 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/markdown.rb
+  486 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/textile.rb
+  487 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/rdoc.rb
+  488 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/wiki.rb
+  489 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/yajl.rb
+  490 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/asciidoc.rb
+  491 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt/plain.rb
+  492 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/tilt-1.4.1/lib/tilt.rb
+  493 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/eco_template.rb
+  494 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/ejs_template.rb
+  495 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/jst_processor.rb
+  496 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/utils.rb
+  497 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/engines.rb
+  498 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rack-1.5.2/lib/rack/mime.rb
+  499 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/mime.rb
+  500 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/processor.rb
+  501 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/processing.rb
+  502 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/compressing.rb
+  503 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/paths.rb
+  504 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/hike-1.2.3/lib/hike/normalized_array.rb
+  505 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/hike-1.2.3/lib/hike/extensions.rb
+  506 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/hike-1.2.3/lib/hike/index.rb
+  507 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/hike-1.2.3/lib/hike/paths.rb
+  508 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/hike-1.2.3/lib/hike/trail.rb
+  509 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/shellwords.rb
+  510 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/exception.rb
+  511 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/syntax_error.rb
+  512 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/x86_64-darwin13.0/psych.bundle
+  513 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/omap.rb
+  514 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/set.rb
+  515 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/class_loader.rb
+  516 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/scalar_scanner.rb
+  517 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/nodes/node.rb
+  518 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/nodes/stream.rb
+  519 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/nodes/document.rb
+  520 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/nodes/sequence.rb
+  521 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/nodes/scalar.rb
+  522 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/nodes/mapping.rb
+  523 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/nodes/alias.rb
+  524 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/nodes.rb
+  525 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/streaming.rb
+  526 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/visitors/visitor.rb
+  527 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/visitors/to_ruby.rb
+  528 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/visitors/emitter.rb
+  529 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/handler.rb
+  530 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/tree_builder.rb
+  531 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/visitors/yaml_tree.rb
+  532 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/json/ruby_events.rb
+  533 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/visitors/json_tree.rb
+  534 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/visitors/depth_first.rb
+  535 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/visitors.rb
+  536 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/parser.rb
+  537 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/coder.rb
+  538 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/core_ext.rb
+  539 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/deprecated.rb
+  540 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/stream.rb
+  541 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/json/yaml_events.rb
+  542 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/json/tree_builder.rb
+  543 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/json/stream.rb
+  544 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych/handlers/document_stream.rb
+  545 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/psych.rb
+  546 /Users/joberbeck/.rbenv/versions/2.1.3/lib/ruby/2.1.0/yaml.rb
+  547 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/directive_processor.rb
+  548 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/safety_colons.rb
+  549 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/charset_normalizer.rb
+  550 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/sass_compressor.rb
+  551 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/yui_compressor.rb
+  552 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/closure_compressor.rb
+  553 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/uglifier_compressor.rb
+  554 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/sass_template.rb
+  555 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/scss_template.rb
+  556 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets.rb
+  557 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/errors.rb
+  558 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/benchmarkable.rb
+  559 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/active_model_helper.rb
+  560 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/asset_url_helper.rb
+  561 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/capture_helper.rb
+  562 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/tag_helper.rb
+  563 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/asset_tag_helper.rb
+  564 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/atom_feed_helper.rb
+  565 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/cache_helper.rb
+  566 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/controller_helper.rb
+  567 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/csrf_helper.rb
+  568 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/date_helper.rb
+  569 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/debug_helper.rb
+  570 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/javascript_helper.rb
+  571 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/array/access.rb
+  572 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/url_helper.rb
+  573 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/string/filters.rb
+  574 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/vendor/html-scanner.rb
+  575 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/sanitize_helper.rb
+  576 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/output_safety_helper.rb
+  577 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/text_helper.rb
+  578 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/form_tag_helper.rb
+  579 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/model_naming.rb
+  580 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/form_helper.rb
+  581 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/form_options_helper.rb
+  582 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/number_helper.rb
+  583 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/number_helper.rb
+  584 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/module/concerning.rb
+  585 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/module/qualified_const.rb
+  586 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/module.rb
+  587 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/record_identifier.rb
+  588 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/record_tag_helper.rb
+  589 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/rendering_helper.rb
+  590 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers/translation_helper.rb
+  591 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/helpers.rb
+  592 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-rails-2.1.4/lib/sprockets/rails/helper.rb
+  593 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-rails-2.1.4/lib/sprockets/rails/version.rb
+  594 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/engine/configuration.rb
+  595 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/application/configuration.rb
+  596 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-rails-2.1.4/lib/sprockets/railtie.rb
+  597 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/all.rb
+  598 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-rails-4.0.3/lib/sass/rails/version.rb
+  599 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/root.rb
+  600 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/util/subset_map.rb
+  601 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/util/multibyte_string_scanner.rb
+  602 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/util.rb
+  603 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/version.rb
+  604 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/logger/log_level.rb
+  605 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/logger/base.rb
+  606 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/logger.rb
+  607 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/cache_stores/base.rb
+  608 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/cache_stores/filesystem.rb
+  609 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/cache_stores/memory.rb
+  610 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/cache_stores/chain.rb
+  611 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/cache_stores.rb
+  612 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/node.rb
+  613 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/root_node.rb
+  614 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/rule_node.rb
+  615 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/comment_node.rb
+  616 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/prop_node.rb
+  617 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/directive_node.rb
+  618 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/media_node.rb
+  619 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/supports_node.rb
+  620 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/css_import_node.rb
+  621 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/variable_node.rb
+  622 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/mixin_def_node.rb
+  623 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/mixin_node.rb
+  624 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/trace_node.rb
+  625 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/content_node.rb
+  626 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/function_node.rb
+  627 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/return_node.rb
+  628 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/extend_node.rb
+  629 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/if_node.rb
+  630 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/while_node.rb
+  631 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/for_node.rb
+  632 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/each_node.rb
+  633 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/debug_node.rb
+  634 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/warn_node.rb
+  635 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/import_node.rb
+  636 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/charset_node.rb
+  637 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb
+  638 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb
+  639 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/visitors/cssize.rb
+  640 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/visitors/extend.rb
+  641 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/visitors/convert.rb
+  642 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/visitors/to_css.rb
+  643 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/visitors/deep_copy.rb
+  644 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/visitors/set_options.rb
+  645 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/tree/visitors/check_nesting.rb
+  646 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/selector/simple.rb
+  647 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/selector/abstract_sequence.rb
+  648 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/selector/comma_sequence.rb
+  649 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/selector/sequence.rb
+  650 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/selector/simple_sequence.rb
+  651 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/selector.rb
+  652 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/environment.rb
+  653 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/node.rb
+  654 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/variable.rb
+  655 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/functions.rb
+  656 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/funcall.rb
+  657 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/number.rb
+  658 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/color.rb
+  659 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/bool.rb
+  660 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/null.rb
+  661 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/list.rb
+  662 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/arg_list.rb
+  663 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/literal.rb
+  664 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/string.rb
+  665 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/unary_operation.rb
+  666 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/interpolation.rb
+  667 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/string_interpolation.rb
+  668 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/operation.rb
+  669 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/scss/rx.rb
+  670 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/lexer.rb
+  671 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/parser.rb
+  672 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script.rb
+  673 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/scss/script_lexer.rb
+  674 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/scss/script_parser.rb
+  675 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/scss/parser.rb
+  676 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/css_lexer.rb
+  677 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/script/css_parser.rb
+  678 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/scss/static_parser.rb
+  679 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/scss/css_parser.rb
+  680 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/scss.rb
+  681 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/error.rb
+  682 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/importers/base.rb
+  683 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/importers/filesystem.rb
+  684 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/importers.rb
+  685 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/shared.rb
+  686 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/media.rb
+  687 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/supports.rb
+  688 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/engine.rb
+  689 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass/railtie.rb
+  690 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-3.2.19/lib/sass.rb
+  691 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/sass_functions.rb
+  692 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-rails-4.0.3/lib/sass/rails/helpers.rb
+  693 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sprockets-2.11.0/lib/sprockets/sass_importer.rb
+  694 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-rails-4.0.3/lib/sass/rails/importer.rb
+  695 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-rails-4.0.3/lib/sass/rails/template.rb
+  696 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-rails-4.0.3/lib/sass/rails/logger.rb
+  697 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-rails-4.0.3/lib/sass/rails/railtie.rb
+  698 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-rails-4.0.3/lib/sass/rails.rb
+  699 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/sass-rails-4.0.3/lib/sass-rails.rb
+  700 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/execjs-2.2.1/lib/execjs/version.rb
+  701 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/execjs-2.2.1/lib/execjs/module.rb
+  702 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/execjs-2.2.1/lib/execjs/encoding.rb
+  703 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/execjs-2.2.1/lib/execjs/runtime.rb
+  704 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/execjs-2.2.1/lib/execjs/disabled_runtime.rb
+  705 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/execjs-2.2.1/lib/execjs/external_runtime.rb
+  706 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/execjs-2.2.1/lib/execjs/johnson_runtime.rb
+  707 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/execjs-2.2.1/lib/execjs/mustang_runtime.rb
+  708 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/execjs-2.2.1/lib/execjs/ruby_racer_runtime.rb
+  709 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/execjs-2.2.1/lib/execjs/ruby_rhino_runtime.rb
+  710 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/execjs-2.2.1/lib/execjs/runtimes.rb
+  711 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/execjs-2.2.1/lib/execjs.rb
+  712 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/uglifier-2.5.3/lib/uglifier/version.rb
+  713 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/uglifier-2.5.3/lib/uglifier.rb
+  714 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/coffee-script-source-1.8.0/lib/coffee_script/source.rb
+  715 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/coffee-script-2.3.0/lib/coffee_script.rb
+  716 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/coffee-script-2.3.0/lib/coffee-script.rb
+  717 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/coffee-rails-4.0.1/lib/coffee/rails/engine.rb
+  718 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/coffee-rails-4.0.1/lib/coffee/rails/template_handler.rb
+  719 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/coffee-rails-4.0.1/lib/coffee/rails/version.rb
+  720 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/coffee-rails-4.0.1/lib/coffee-rails.rb
+  721 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/jquery-rails-3.1.2/lib/jquery/rails/engine.rb
+  722 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/jquery-rails-3.1.2/lib/jquery/rails/railtie.rb
+  723 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/jquery-rails-3.1.2/lib/jquery/rails/version.rb
+  724 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/jquery-rails-3.1.2/lib/jquery/rails.rb
+  725 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/jquery-rails-3.1.2/lib/jquery-rails.rb
+  726 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/turbolinks-2.3.0/lib/turbolinks/version.rb
+  727 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/turbolinks-2.3.0/lib/turbolinks/xhr_headers.rb
+  728 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/turbolinks-2.3.0/lib/turbolinks/xhr_url_for.rb
+  729 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/turbolinks-2.3.0/lib/turbolinks/cookies.rb
+  730 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/turbolinks-2.3.0/lib/turbolinks/x_domain_blocker.rb
+  731 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/turbolinks-2.3.0/lib/turbolinks/redirection.rb
+  732 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/turbolinks-2.3.0/lib/turbolinks.rb
+  733 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/jbuilder-2.1.3/lib/jbuilder/jbuilder.rb
+  734 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/array/grouping.rb
+  735 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/array.rb
+  736 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/jbuilder-2.1.3/lib/jbuilder/key_formatter.rb
+  737 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/jbuilder-2.1.3/lib/jbuilder/errors.rb
+  738 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/multi_json-1.10.1/lib/multi_json/options.rb
+  739 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/multi_json-1.10.1/lib/multi_json/version.rb
+  740 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/multi_json-1.10.1/lib/multi_json/adapter_error.rb
+  741 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/multi_json-1.10.1/lib/multi_json/parse_error.rb
+  742 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/multi_json-1.10.1/lib/multi_json.rb
+  743 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/string/starts_ends_with.rb
+  744 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/http/mime_types.rb
+  745 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/http/mime_type.rb
+  746 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/core_ext/numeric/bytes.rb
+  747 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/activesupport-4.1.6/lib/active_support/cache.rb
+  748 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/template/handlers.rb
+  749 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/erubis-2.7.0/lib/erubis/util.rb
+  750 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/erubis-2.7.0/lib/erubis/generator.rb
+  751 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/erubis-2.7.0/lib/erubis/converter.rb
+  752 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/erubis-2.7.0/lib/erubis/error.rb
+  753 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/erubis-2.7.0/lib/erubis/context.rb
+  754 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/erubis-2.7.0/lib/erubis/evaluator.rb
+  755 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/erubis-2.7.0/lib/erubis/engine.rb
+  756 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/erubis-2.7.0/lib/erubis/helper.rb
+  757 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/erubis-2.7.0/lib/erubis/enhancer.rb
+  758 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/erubis-2.7.0/lib/erubis/engine/eruby.rb
+  759 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/erubis-2.7.0/lib/erubis/local-setting.rb
+  760 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/erubis-2.7.0/lib/erubis.rb
+  761 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/template/handlers/erb.rb
+  762 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/template/handlers/builder.rb
+  763 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/template/handlers/raw.rb
+  764 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/template.rb
+  765 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/jbuilder-2.1.3/lib/jbuilder/jbuilder_template.rb
+  766 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/actionview-4.1.6/lib/action_view/dependency_tracker.rb
+  767 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/jbuilder-2.1.3/lib/jbuilder/dependency_tracker.rb
+  768 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/jbuilder-2.1.3/lib/jbuilder/railtie.rb
+  769 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/jbuilder-2.1.3/lib/jbuilder.rb
+  770 /Users/joberbeck/.rvm/gems/ruby-2.1.3/gems/rails-html-sanitizer-1.0.1/lib/rails/html/sanitizer/version.rb
+
+[NOTE]
+You may have encountered a bug in the Ruby interpreter or extension libraries.
+Bug reports are welcome.
+Don't forget to include the above Crash Report log file.
+For details: http://www.ruby-lang.org/bugreport.html
+
